@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Stardew Valley Zodiac Characters</title>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <div class = "background">
+        <div class = "box">
+            <h1>Which Stardew Valley Character are You?</h1>
+            <label id = "change">Please Enter your Birthday:</label>
+            <!--info from w3schools-->
+            <form>
+                <input type="text" id="month" name="month" value = "MM">
+                <!--<p class = "slash"> / </p>-->
+                <input type="text" id="day" name="day" value = "DD">
+                <!--<p class = "slash"> / </p>-->
+                <input type="text" id="year" name="year" value = "YY">
+            </form>
+            <br>
+            <img src="Assets/Images/Chicken.png" alt="Maru">
+            <br>
+            <!--I want this button to change its text when clicked-->
+            <button id = "findButton">Find Your Character!</button>
+        </div>
+
+        <!--I want this button to change its text when clicked-->
+        <button id = "music">||</button>
+        <button id = "help">?</button>
+    </div>
 </body>
 </html>

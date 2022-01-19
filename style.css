@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Space Mono';
+    src: url(Assets/Fonts/SpaceMono-Bold.woff2) format('woff2'),
+        url(Assets/Fonts/SpaceMono-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Space Mono', monospace, sans-serif;
+    background-image: url(Assets/Images/Background.jpeg);
+}
+h1{
+    font-size: 2rem;
+    text-align:center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+p{
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 1.75rem;
+}
+input{
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 1.75rem;
+    text-align:center;
+    background-color: #F9FEFF;
+    border-color: transparent;
+    border-radius: 10px;
+}
+label{
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+    border-color: transparent;
+}
+button{
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 1.5rem;
+    border-color: transparent;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75%;
+}
+
+.box{
+    background-color: rgba(216, 227, 228, .8);
+    border-radius: 20px;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    padding: 5% 2%;
+    width: 90%;
+    height: auto;
+}
+.slash{
+    margin:0;
+    padding:0;
+    border:0;
+}
+#month{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+#day{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+#year{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+#findButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .75rem 3rem;
+    background-color: #627172;
+    color:#F9FEFF;
+    border-radius: 10px;
+}
+#music{
+    background-color: transparent;
+    color: #F9FEFF;
+    border-width: .40rem;
+    border-radius: 100%;
+    border-color: #F9FEFF;
+    padding: .7rem;
+    float: left;
+}
+#help{
+    background-color: transparent;
+    color: #F9FEFF;
+    border-width: .40rem;
+    border-radius: 100%;
+    border-color: #F9FEFF;
+    padding: .7rem 1.1rem;
+    float: right;
+}
