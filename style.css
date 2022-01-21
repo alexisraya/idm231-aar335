@@ -39,7 +39,6 @@ label{
 button{
     font-family: 'Space Mono', monospace, sans-serif;
     font-size: 1.5rem;
-    border-color: transparent;
 }
 img{
     display: block;
@@ -85,6 +84,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     padding: .75rem 3rem;
+    border-color: transparent;
     background-color: #627172;
     color:#F9FEFF;
     border-radius: 10px;
