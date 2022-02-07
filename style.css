@@ -50,36 +50,49 @@ img{
 .box{
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    display: block;
-    margin-top: 5%;
+    margin-top: 2.5rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
-    padding: 5% 2%;
+    padding: 2rem 1rem;
     width: 90%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
+
+.box__title{
+    order: 0;
+}
+.box__form{
+    margin-bottom: 1rem;
+    order: 1;
+    display: flex;
+    align-content: space-between;
+}
+#month{
+    width: 30%;
+}
+#day{
+    width: 30%;
+}
+#year{
+    width: 30%;
+}
+
+.box__img{
+    order: 2;
+    margin-bottom: 1rem;
+}
+
 .slash{
     margin:0;
     padding:0;
     border:0;
 }
-#month{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-#day{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-#year{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-#findButton{
+
+.box__button{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -88,8 +101,10 @@ img{
     background-color: #627172;
     color:#F9FEFF;
     border-radius: 10px;
+    align-items: flex-end;
+    order: 9;
 }
-#music{
+.music{
     background-color: transparent;
     color: #F9FEFF;
     border-width: .40rem;
@@ -98,7 +113,7 @@ img{
     padding: .7rem;
     float: left;
 }
-#help{
+.help{
     background-color: transparent;
     color: #F9FEFF;
     border-width: .40rem;
