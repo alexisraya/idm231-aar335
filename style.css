@@ -69,7 +69,7 @@ img{
     margin-bottom: 1rem;
     order: 1;
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
 }
 #month{
     width: 30%;
