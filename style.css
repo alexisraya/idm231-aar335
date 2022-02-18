@@ -49,33 +49,28 @@ img{
 
 button{
     border-style: none;
+    background-color: transparent;
+    border-color: none;
 }
 
 .controls{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1rem;
-}
-.music{
-    background-color: transparent;
-    border-color: none;
-}
-.help{
-    background-color: transparent;
-    color: #F9FEFF;
-    border-width: .40rem;
-    border-radius: 100%;
-    border-color: #F9FEFF;
-    padding: .7rem 1.1rem;
+    margin: 2rem 1rem 0rem 1rem;
 }
 
-.box{
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main_box{
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    margin: 1.5rem auto;
+    margin: 1.5rem 1rem;
     padding: 2rem 1rem;
-    width: 90%;
+    /* width: 90%; */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -95,6 +90,7 @@ button{
 
 .box__img{
     order: 2;
+    margin-top: 1.5rem;
 }
 
 .slash{

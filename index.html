@@ -15,33 +15,35 @@
             <source src ="Assets/Stardew-Valley-OST-Stardew-Valley-Overture.ogg" type ="audio/ogg">
             <source src="/Assets/Stardew Valley OST - Stardew Valley Overture.mp3" type="audio/mpeg">
         </audio> 
-        <div class = "controls">
-            <!--I want this button to change its text when clicked-->
-            <button class = "music js-music-button">
-                <img class="js-music-button-img" src="Assets/Images/Play.png" alt="Play/Pause Button">
-            </button>
-            <button class = "help js-help-button">
-                <img class="js-music-button-img" src="Assets/Images/Help.png" alt="Help Button">
-            </button>
-        </div>
-         
-        <div class = "box">
-            <div class = "box__title">
-                <h1 class="box__title-question">Which Stardew Valley Character are You?</h1>
+        
+        
+        <div class = "wrapper">
+            <div class = "controls">
+                <!--I want this button to change its text when clicked-->
+                <button class = "music js-music-button">
+                    <img class="js-music-button-img" src="Assets/Images/Play.png" alt="Play/Pause Button">
+                </button>
+                <button class = "help js-help-button">
+                    <img class="js-music-button-img" src="Assets/Images/Help.png" alt="Help Button">
+                </button>
             </div>
-            <!--info from w3schools-->
-            <form class="box__form">
-                <!-- <label for = "date">Please Enter your Birthday:</label> -->
-                <input id="date" type="date" value = "">
-            </form>
-            <br>
-            <img class="box__img js-main-img" src="Assets/Images/Chicken.png" alt="Chicken">
-            <br>
+            <div class = "main_box">
+                <div class = "box__title">
+                    <h1 class="box__title-question">Which Stardew Valley Character are You?</h1>
+                </div>
+                <!--info from w3schools-->
+                <form class="box__form">
+                    <!-- <label for = "date">Please Enter your Birthday:</label> -->
+                    <input id="date" type="date" value = "">
+                </form>
+                <img class="box__img js-main-img" src="Assets/Images/Chicken.png" alt="Chicken">
 
-            <p class = "box__reveal js-reveal-text"></p>
-            <!--I want this button to change its text when clicked-->
-            <button class = "box__button js-find-button">Find Your Character!</button>
+                <p class = "box__reveal js-reveal-text"></p>
+                <!--I want this button to change its text when clicked-->
+                <button class = "box__button js-find-button">Find Your Character!</button>
+            </div>
         </div>
+        
     </div>
     <script src="main.js"></script>
 </body>
