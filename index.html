@@ -10,29 +10,33 @@
 </head>
 <body>
     <div class = "background">
+
+        <audio class = "js-music" autoplay loop>
+            <source src ="Assets/Stardew-Valley-OST-Stardew-Valley-Overture.ogg" type ="audio/ogg">
+            <source src="/Assets/Stardew Valley OST - Stardew Valley Overture.mp3" type="audio/mpeg">
+        </audio> 
+         <!--I want this button to change its text when clicked-->
+         <button class = "music js-music-button">
+            <img class="js-music-button-img" src="Assets/Images/Pause.png" alt="Play/Pause">
+        </button>
+        <button class = "help js-help-button">?</button>
         <div class = "box">
             <div class = "box__title">
                 <h1 class="box__title-question">Which Stardew Valley Character are You?</h1>
-                <label id = "change">Please Enter your Birthday:</label>
             </div>
             <!--info from w3schools-->
             <form class="box__form">
-                <input type="text" id="month" name="month" value = "MM">
-                <!--<p class = "slash"> / </p>-->
-                <input type="text" id="day" name="day" value = "DD">
-                <!--<p class = "slash"> / </p>-->
-                <input type="text" id="year" name="year" value = "YY">
+                <!-- <label for = "date">Please Enter your Birthday:</label> -->
+                <input id="date" type="date" value = "">
             </form>
             <br>
-            <img class="box__img" src="Assets/Images/Chicken.png" alt="Chicken">
+            <img class="box__img js-main-img" src="Assets/Images/Chicken.png" alt="Chicken">
             <br>
-            <!--I want this button to change its text when clicked-->
-            <button class = "box__button">Find Your Character!</button>
-        </div>
 
-        <!--I want this button to change its text when clicked-->
-        <button class = "music">||</button>
-        <button class = "help">?</button>
+            <p class = "box__reveal js-reveal-text"></p>
+            <!--I want this button to change its text when clicked-->
+            <button class = "box__button js-find-button">Find Your Character!</button>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

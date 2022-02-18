@@ -1,114 +1,111 @@
+
+//variables
 let character = "chicken";
 let characterImg = "Assets/Images/Chicken.png";
 
-let month = 00;
-let day = 00;
+let month = "";
+let day = "";
 
+let isPlaying = true;
+
+//function to find the month and day
 const getBday = () => {
-    month = document.getElementById("month").value;
-    day = document.getElementById("day").value;
-
-    if (month != 00 && day !=00) {
+    const date = document.querySelector('#date').value;
+    
+    if (date.length > 0){
+        month = parseInt(date.substring(5,7));
+        day = parseInt(date.substring(8,10));
         findBday();
     }
 };
 
+// function to figure out zodiac
 const findBday = () =>{
-    if (month == 01){
-        if (day <= 19){
-            character = "Linus";
-        }
-        else{
+    if ((month == 1 && day <=19) || (month == 12 && day>21)){
+        character = "Linus";
+        characterImg = "Assets/Images/Linus.png"
+    }
+    if ((month == 1 && day >19) || (month == 2 && day<=18)){
         character = "Wizard";
-        }
+        characterImg = "Assets/Images/Wizard.png"
     }
-    else if (month == 02){
-        if (day <= 18){
-            character = "Wizard";
-        }
-        else{
-            character = "Clint";
-        }
+    if ((month == 2 && day >18) || (month == 3 && day<=20)){
+        character = "Clint";
+        characterImg = "Assets/Images/Clint.png"
     }
-    else if (month == 03){
-        if (day <= 20){
-            character = "Clint";
-        }
-        else{
-            character = "Kent";
-        }
+    if ((month == 3 && day >20) || (month == 4 && day<=19)){
+        character = "Kent";
+        characterImg = "Assets/Images/Kent.png"
     }
-    else if (month == 04){
-        if (day <= 19){
-            character = "Kent";
-        }
-        else{
-            character = "Vincent";
-        }
+    if ((month == 4 && day >20) || (month == 5 && day<=20)){
+        character = "Vincent";
+        characterImg = "Assets/Images/Vincent.png"
     }
-    else if (month == 05){
-        if (day <= 20){
-            character = "Vincent";
-        }
-        else{
-            character = "Emily";
-        }
+    if ((month == 5 && day >20) || (month == 6 && day<=21)){
+        character = "Emily";
+        characterImg = "Assets/Images/Emily.png"
     }
-    else if (month == 06){
-        if (day <= 21){
-            character = "Emily";
-        }
-        else{
-            character = "Maru";
-        }
+    if ((month == 6 && day >21) || (month == 7 && day<=22)){
+        character = "Maru";
+        characterImg = "Assets/Images/Maru.png"
     }
-    else if (month == 07){
-        if (day <= 22){
-            character = "Maru";
-        }
-        else{
-            character = "Sam";
-        }
+    if ((month == 7 && day >22) || (month == 8 && day<=22)){
+        character = "Sam";
+        characterImg = "Assets/Images/Sam.png"
     }
-    else if (month == 08){
-        if (day <= 22){
-            character = "Sam";
-        }
-        else{
-            character = "Willy";
-        }
+    if ((month == 8 && day >22) || (month == 9 && day<=22)){
+        character = "Willy";
+        characterImg = "Assets/Images/Willy.png"
     }
-    else if (month == 09){
-        if (day <= 22){
-            character = "Willy";
-        }
-        else{
-            character = "Penny";
-        }
+    if ((month == 9 && day >22) || (month == 10 && day<=23)){
+        character = "Penny";
+        characterImg = "Assets/Images/Penny.png"
     }
-    else if (month == 10){
-        if (day <= 23){
-            character = "Penny";
-        }
-        else{
-            character = "Sandy";
-        }
+    if ((month == 10 && day >23) || (month == 11 && day<=21)){
+        character = "Sandy";
+        characterImg = "Assets/Images/Sandy.png"
     }
-    else if (month == 11){
-        if (day <= 21){
-            character = "Sandy";
-        }
-        else{
-            character = "Robin";
-        }
+    if ((month == 11 && day >21) || (month == 12 && day<=21)){
+        character = "Robin";
+        characterImg = "Assets/Images/Robin.png"
     }
-    else if (month == 12){
-        if (day <= 21){
-            character = "Robin";
-        }
-        else{
-            character = "Linus";
-        }
+
+    changeImg();
+};
+
+// function to change image and update text
+const changeImg =() =>{
+    const mainImg = document.querySelector('.js-main-img');
+    mainImg.src = characterImg;
+    
+    const revealText= document.querySelector('.js-reveal-text');
+
+    revealText.innerHTML = "Your Character is "+character+"!";
+    revealText.style.display = "block";
+    findButton.innerHTML = "Find Another Character!";
+};
+
+// function to play/pause music
+const controlMusic = () =>{
+    console.log("hi");
+    const music = document.querySelector('.js-music');
+    const musicImg = document.querySelector('.js-music-button-img');
+
+    if (isPlaying){
+        music.pause();
+        musicImg.src = "Assets/Images/Play.png";
+        isPlaying = false;
+    }
+    else{
+        music.play();
+        musicImg.src = "Assets/Images/Pause.png";
+        isPlaying = true;
     }
 };
 
+//Event Listeners
+const findButton = document.querySelector('.js-find-button');
+findButton.addEventListener('click', getBday);
+
+const musicButton = document.querySelector('.js-music-button');
+musicButton.addEventListener('click', controlMusic);

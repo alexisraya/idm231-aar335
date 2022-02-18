@@ -36,15 +36,19 @@ label{
     margin: 1rem auto;
     border-color: transparent;
 }
-button{
+/* button{
     font-family: 'Space Mono', monospace, sans-serif;
     font-size: 1.5rem;
-}
+} */
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 75%;
+}
+
+button{
+    border-style: none;
 }
 
 .box{
@@ -69,21 +73,12 @@ img{
     margin-bottom: 1rem;
     order: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-#month{
-    width: 30%;
-}
-#day{
-    width: 30%;
-}
-#year{
-    width: 30%;
-}
+
 
 .box__img{
     order: 2;
-    margin-bottom: 1rem;
 }
 
 .slash{
@@ -92,6 +87,13 @@ img{
     border:0;
 }
 
+.box__reveal{
+    margin-bottom: 1rem;
+    display:hidden;
+    text-align: center;
+    align-items: flex-end;
+    order: 8;
+}
 .box__button{
     display: block;
     margin-left: auto;
@@ -104,13 +106,17 @@ img{
     align-items: flex-end;
     order: 9;
 }
+
+.box__button:active{
+    color:black;
+}
 .music{
     background-color: transparent;
     color: #F9FEFF;
-    border-width: .40rem;
+    /* border-width: .40rem;
     border-radius: 100%;
-    border-color: #F9FEFF;
-    padding: .7rem;
+    padding: .7rem; */
+    border-color: none;
     float: left;
 }
 .help{
