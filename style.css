@@ -51,13 +51,29 @@ button{
     border-style: none;
 }
 
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.music{
+    background-color: transparent;
+    border-color: none;
+}
+.help{
+    background-color: transparent;
+    color: #F9FEFF;
+    border-width: .40rem;
+    border-radius: 100%;
+    border-color: #F9FEFF;
+    padding: .7rem 1.1rem;
+}
+
 .box{
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    margin-top: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1%;
+    margin: 1.5rem auto;
     padding: 2rem 1rem;
     width: 90%;
     height: auto;
@@ -109,22 +125,4 @@ button{
 
 .box__button:active{
     color:black;
-}
-.music{
-    background-color: transparent;
-    color: #F9FEFF;
-    /* border-width: .40rem;
-    border-radius: 100%;
-    padding: .7rem; */
-    border-color: none;
-    float: left;
-}
-.help{
-    background-color: transparent;
-    color: #F9FEFF;
-    border-width: .40rem;
-    border-radius: 100%;
-    border-color: #F9FEFF;
-    padding: .7rem 1.1rem;
-    float: right;
 }

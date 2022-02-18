@@ -6,7 +6,7 @@ let characterImg = "Assets/Images/Chicken.png";
 let month = "";
 let day = "";
 
-let isPlaying = true;
+let isPlaying = false;
 
 //function to find the month and day
 const getBday = () => {
@@ -87,7 +87,6 @@ const changeImg =() =>{
 
 // function to play/pause music
 const controlMusic = () =>{
-    console.log("hi");
     const music = document.querySelector('.js-music');
     const musicImg = document.querySelector('.js-music-button-img');
 
