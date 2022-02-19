@@ -80,16 +80,22 @@ button{
 .box__title{
     order: 0;
 }
+.main_box__direction{
+    order: 1;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
 .box__form{
     margin-bottom: 1rem;
-    order: 1;
+    order: 2;
     display: flex;
     justify-content: space-around;
 }
 
 
 .box__img{
-    order: 2;
+    order: 3;
     margin-top: 1.5rem;
 }
 
