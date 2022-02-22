@@ -108,13 +108,11 @@ function showHelp(){
     const helpBox = document.querySelector('.js-help-box');
 
     if (isHelping){
-        helpBox.classList.remove("help__help-text--open");
-        helpBox.classList.add("help__help-text--close");
+        helpBox.style.display = "none";
         isHelping = false;
     }
     else{
-        helpBox.classList.remove("help__help-text--close");
-        helpBox.classList.add("help__help-text--open");
+        helpBox.style.display = "flex";
         isHelping = true;
     }
     displayMainBox(isHelping);

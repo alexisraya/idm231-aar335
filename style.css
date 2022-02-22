@@ -80,16 +80,13 @@ button{
     justify-items: center;
 }
 /* This is for the help box */
-.help__help-text--close{
-    display: none;
-}
-.help__help-text--open{
-    display:flex;
+.help__help-text{
+    display:none;
     padding-top: 1rem;
 }
 
 .help__close-button{
-    text-align: right;
+    align-self:flex-end;
     font-size: 2rem;
     padding-bottom: 1rem;
 }
