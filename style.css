@@ -19,7 +19,11 @@ h1{
 }
 p{
     font-family: 'Space Mono', monospace, sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+}
+li{
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 1.5rem;
 }
 input{
     font-family: 'Space Mono', monospace, sans-serif;
@@ -65,16 +69,47 @@ button{
     flex-direction: column;
     justify-content: space-around;
 }
-.main_box{
+
+.box{
+    display: flex;
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    margin: 1.5rem 1rem;
     padding: 2rem 1rem;
-    /* width: 90%; */
-    height: auto;
-    display: flex;
+    margin: 1.5rem 1rem;
     flex-direction: column;
     justify-items: center;
+}
+/* This is for the help box */
+.help__help-text--close{
+    display: none;
+}
+.help__help-text--open{
+    display:flex;
+    padding-top: 1rem;
+}
+
+.help__close-button{
+    text-align: right;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.help__help-text--title{
+    margin-bottom: 1rem;
+}
+.help__help-text--par{
+    text-align: left;
+    margin-bottom: .75rem;
+    margin-top:.25rem;
+}
+.help__help-text--list{
+    text-align: left;
+    margin: 0;
+}
+
+/*This is for the main box*/
+.main_box{
+    /* width: 90%; */
+    height: auto;
 }
 
 .box__title{

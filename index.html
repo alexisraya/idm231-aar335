@@ -23,15 +23,40 @@
                 <button class = "music js-music-button">
                     <img class="js-music-button-img" src="Assets/Images/Play.png" alt="Play/Pause Button">
                 </button>
-                <button class = "help js-help-button">
-                    <img class="js-music-button-img" src="Assets/Images/Help.png" alt="Help Button">
-                </button>
+                <button class = "help__open-button js-help-open-button">
+                        <img class="js-help-button-img" src="Assets/Images/Help.png" alt="Help Button">
+                    </button>
             </div>
-            <div class = "main_box">
+
+            <!--This is the help button-->
+            <div class = "help">
+                <!--This is the open button-->
+                <div class = "box help__help-text help__help-text--close js-help-box">
+                    <!--This is the close button-->
+                    <button class="help__close-button js-help-close-button">
+                        X
+                    </button>
+                    <h1 class="help__help-text--title">Welcome to Stardew Valley Zodiac!</h1>
+                    <p class="help__help-text--par">
+                        In this game, you’ll be able to find out which character’s birthday you match with.
+                    </p>
+                    <p class="help__help-text--par">
+                        <ol class="help__help-text--list">
+                            <li>Enter your birthday in the [MM/DD/YY] text box.</li>
+                            <li>Press on the [Find Your Character] button.</li>
+                        </ol>
+                    </p>
+                    <p class="help__help-text--par">
+                        To pause or play the music, press on the play/pause button in the top right corner.
+                    </p>
+                </div>
+            </div>
+
+            <div class = "box main_box js-main-box">
                 <div class = "box__title">
                     <h1 class="box__title-question">Which Stardew Valley Character are You?</h1>
                 </div>
-                <p class="main_box__direction">Please Enter Your Birtday:</p>
+                <p class="main_box__direction">Please Enter Your Birthday:</p>
                 <form class="box__form">
                     <!-- <label for = "date">Please Enter your Birthday:</label>
                     <br> -->

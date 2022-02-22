@@ -7,6 +7,7 @@ let month = "";
 let day = "";
 
 let isPlaying = false;
+let isHelping = false;
 
 //function to find the month and day
 const getBday = () => {
@@ -102,9 +103,42 @@ const controlMusic = () =>{
     }
 };
 
+//function to hide/show help box
+function showHelp(){
+    const helpBox = document.querySelector('.js-help-box');
+
+    if (isHelping){
+        helpBox.classList.remove("help__help-text--open");
+        helpBox.classList.add("help__help-text--close");
+        isHelping = false;
+    }
+    else{
+        helpBox.classList.remove("help__help-text--close");
+        helpBox.classList.add("help__help-text--open");
+        isHelping = true;
+    }
+    displayMainBox(isHelping);
+}
+
+function displayMainBox(isHiding){
+    const mainBox = document.querySelector('.js-main-box');
+    if (isHiding){
+        mainBox.style.display = "none";
+    }
+    else{
+        mainBox.style.display = "flex";
+    }
+}
+
 //Event Listeners
 const findButton = document.querySelector('.js-find-button');
 findButton.addEventListener('click', getBday);
 
 const musicButton = document.querySelector('.js-music-button');
 musicButton.addEventListener('click', controlMusic);
+
+const helpOpenButton = document.querySelector('.js-help-open-button');
+helpOpenButton.addEventListener('click', showHelp);
+
+const helpCloseButton = document.querySelector('.js-help-close-button');
+helpCloseButton.addEventListener('click', showHelp);
