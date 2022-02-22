@@ -100,7 +100,8 @@ button{
 }
 .help__help-text--list{
     text-align: left;
-    margin: 0;
+    margin-top:.75rem;
+    margin-bottom: .75rem;
 }
 
 /*This is for the main box*/
