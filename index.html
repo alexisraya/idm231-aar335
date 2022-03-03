@@ -25,7 +25,7 @@
                 </button>
                 <button class = "help__open-button js-help-open-button">
                         <img class="js-help-button-img" src="Assets/Images/Help.png" alt="Help Button">
-                    </button>
+                </button>
             </div>
 
             <!--This is the help button-->
@@ -56,13 +56,18 @@
                 </div>
                 <p class="main_box__direction">Please Enter Your Birthday:</p>
                 <form class="box__form">
-                    <!-- <label for = "date">Please Enter your Birthday:</label>
-                    <br> -->
+                    <label class = "hidden" for = "date">Please Enter your Birthday:</label>
+                    <!-- <br> -->
                     <input id="date" type="date">
+                    <button class = "box__button hidden js-hidden-button">Find Your Character!</button>
                 </form>
                 <img class="box__img js-main-img" src="Assets/Images/Chicken.png" alt="Chicken">
 
-                <p class = "box__reveal js-reveal-text"></p>
+                <div class = "box__reveal">
+                        <p class = "box__name js-reveal-text"></p>
+                        <p class = "box__bio js-bio-text"></p>
+                </div>
+                
                 <!--I want this button to change its text when clicked-->
                 <button class = "box__button js-find-button">Find Your Character!</button>
             </div>

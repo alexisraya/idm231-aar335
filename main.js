@@ -2,6 +2,7 @@
 //variables
 let character = "chicken";
 let characterImg = "Assets/Images/Chicken.png";
+let bio = "";
 
 let month = "";
 let day = "";
@@ -24,51 +25,64 @@ const getBday = () => {
 const findBday = () =>{
     if ((month == 1 && day <=19) || (month == 12 && day>21)){
         character = "Linus";
-        characterImg = "Assets/Images/Linus.png"
+        characterImg = "Assets/Images/Linus.png";
+        bio = "You feel like you're an outcast from other people around town and you're generally slow to trust people. You also like yams and coconuts!";
     }
     if ((month == 1 && day >19) || (month == 2 && day<=18)){
         character = "Wizard";
-        characterImg = "Assets/Images/Wizard.png"
+        characterImg = "Assets/Images/Wizard.png";
+        bio = "You are a very spiritual and whimsical person. You like mushrooms and cucumbers!";
     }
     if ((month == 2 && day >18) || (month == 3 && day<=20)){
         character = "Clint";
-        characterImg = "Assets/Images/Clint.png"
+        characterImg = "Assets/Images/Clint.png";
+        bio = "You're a handy person and you really like rocks. You also like artichoke dip and risotto!";
     }
     if ((month == 3 && day >20) || (month == 4 && day<=19)){
         character = "Kent";
-        characterImg = "Assets/Images/Kent.png"
+        characterImg = "Assets/Images/Kent.png";
+        bio = "You're a mysterious one. No one really knows your story. You like risotto and hazelnuts!";
     }
     if ((month == 4 && day >20) || (month == 5 && day<=20)){
         character = "Vincent";
-        characterImg = "Assets/Images/Vincent.png"
+        characterImg = "Assets/Images/Vincent.png";
+        bio = "You're energy and like to explore! You like grapes and ginger ale.";
     }
     if ((month == 5 && day >20) || (month == 6 && day<=21)){
         character = "Emily";
-        characterImg = "Assets/Images/Emily.png"
+        characterImg = "Assets/Images/Emily.png";
+        bio = "You're crafty and a little shy. You like burgers and precious stones!";
     }
     if ((month == 6 && day >21) || (month == 7 && day<=22)){
         character = "Maru";
-        characterImg = "Assets/Images/Maru.png"
+        characterImg = "Assets/Images/Maru.png";
+        bio = "You like to help others and you're into science. You also like strawberries cheese!";
     }
     if ((month == 7 && day >22) || (month == 8 && day<=22)){
         character = "Sam";
-        characterImg = "Assets/Images/Sam.png"
+        characterImg = "Assets/Images/Sam.png";
+        bio = "You are a music junkie and homebody. You like pizza and maple bars";
+
     }
     if ((month == 8 && day >22) || (month == 9 && day<=22)){
         character = "Willy";
-        characterImg = "Assets/Images/Willy.png"
+        characterImg = "Assets/Images/Willy.png";
+        bio = "The ocean is your home. You like the beach and sea creatures!";
     }
     if ((month == 9 && day >22) || (month == 10 && day<=23)){
         character = "Penny";
-        characterImg = "Assets/Images/Penny.png"
+        characterImg = "Assets/Images/Penny.png";
+        bio = "You're someone that people look up to. You like melons and poppies!";
     }
     if ((month == 10 && day >23) || (month == 11 && day<=21)){
         character = "Sandy";
-        characterImg = "Assets/Images/Sandy.png"
+        characterImg = "Assets/Images/Sandy.png";
+        bio = "You like thrifting and the desert. You also like daffodils and mango sticky rice!";
     }
     if ((month == 11 && day >21) || (month == 12 && day<=21)){
         character = "Robin";
-        characterImg = "Assets/Images/Robin.png"
+        characterImg = "Assets/Images/Robin.png";
+        bio = "You're very comforting and helpful. You like peaches and spaghetti!";
     }
 
     changeImg();
@@ -80,9 +94,13 @@ const changeImg =() =>{
     mainImg.src = characterImg;
     
     const revealText= document.querySelector('.js-reveal-text');
+    const bioText = document.querySelector('.js-bio-text');
 
     revealText.innerHTML = "Your Character is "+character+"!";
+    bioText.innerHTML = bio;
+
     revealText.style.display = "block";
+    bioText.style.display = "block"
     findButton.innerHTML = "Find Another Character!";
 };
 
@@ -131,6 +149,12 @@ function displayMainBox(isHiding){
 //Event Listeners
 const findButton = document.querySelector('.js-find-button');
 findButton.addEventListener('click', getBday);
+
+const hiddenButton = document.querySelector('.js-hidden-button');
+hiddenButton.addEventListener('click', function(event){
+    event.preventDefault();
+    getBday();
+});
 
 const musicButton = document.querySelector('.js-music-button');
 musicButton.addEventListener('click', controlMusic);

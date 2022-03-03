@@ -1,3 +1,9 @@
+:root{
+    --h1-size: 1.5rem;
+    --p-size:1.25rem;
+    --bio-size:1.15rem;
+}
+
 @font-face {
     font-family: 'Space Mono';
     src: url(Assets/Fonts/SpaceMono-Bold.woff2) format('woff2'),
@@ -12,29 +18,29 @@ body{
     background-image: url(Assets/Images/Background.jpeg);
 }
 h1{
-    font-size: 2rem;
+    font-size: var(--h1-size);
     text-align:center;
     margin-top: 0rem;
     margin-bottom: 1rem;
 }
 p{
     font-family: 'Space Mono', monospace, sans-serif;
-    font-size: 1.5rem;
+    font-size: var(--p-size);
 }
 li{
     font-family: 'Space Mono', monospace, sans-serif;
-    font-size: 1.5rem;
+    font-size: var(--p-size);
 }
 input{
     font-family: 'Space Mono', monospace, sans-serif;
-    font-size: 1.75rem;
+    font-size: var(--p-size);
     text-align:center;
     background-color: #F9FEFF;
     border-color: transparent;
     border-radius: 10px;
 }
 label{
-    font-size: 1.5rem;
+    font-size: var(--p-size);
     display: block;
     text-align: center;
     margin: 1rem auto;
@@ -139,25 +145,59 @@ button{
 }
 
 .box__reveal{
-    margin-bottom: 1rem;
+    order: 9;
+}
+.box__name{
+    margin-bottom: .5rem;
     display:hidden;
     text-align: center;
     align-items: flex-end;
-    order: 8;
 }
+
+.box__bio{
+    font-size: var(--bio-size);
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    display:hidden;
+    text-align: center;
+    align-items: flex-end;
+}
+
 .box__button{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: .5rem;
     padding: .75rem 3rem;
     border-color: transparent;
     background-color: #627172;
     color:#F9FEFF;
     border-radius: 10px;
     align-items: flex-end;
-    order: 9;
+    order: 10;
 }
 
 .box__button:active{
     color:black;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (min-width: 600px){
+    *{
+        --h1-size: 1.5rem;
+        --p-size:1.25rem;
+        --bio-size:1.15rem;
+    }
+}
+
+@media (min-width: 1000px){
+    *{
+        --h1-size: 2rem;
+        --p-size: 1.5rem;
+        --bio-size: 1.35rem;
+    }
 }
