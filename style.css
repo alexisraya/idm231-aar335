@@ -171,15 +171,16 @@ button{
     margin-top: .5rem;
     padding: .75rem 3rem;
     border-color: transparent;
-    background-color: #627172;
+    background-color: #66bcc2;
     color:#F9FEFF;
     border-radius: 10px;
     align-items: flex-end;
-    order: 10;
+    order: 3;
 }
 
 .box__button:active{
     color:black;
+    background-color: #497c80;
 }
 
 .hidden{
