@@ -187,11 +187,39 @@ button{
     display: none;
 }
 
+.characters{
+    background-color: rgba(216, 227, 228, .8);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    margin: 1.5rem 1rem 0rem 1rem;
+    justify-items: center;
+    display: none;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
+    min-height: 70px;;
+}
+
+.characters__card{
+    max-width: 100px;
+    align-self: center;
+    margin: 0 .25rem;
+}
+.characters__card__img{
+    align-self: center;
+    max-width: 90%;
+}
+.characters__card__img:hover{
+    max-width: 110%;
+}
 @media (min-width: 600px){
     *{
         --h1-size: 1.5rem;
         --p-size:1.25rem;
         --bio-size:1.15rem;
+    }
+    .characters{
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 1fr;
     }
 }
 

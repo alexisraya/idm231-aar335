@@ -14,20 +14,67 @@
         <audio class = "js-music" loop>
             <source src ="Assets/StardewValleyOverture.ogg" type ="audio/ogg">
             <source src="Assets/StardewValleyOverture.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio class = "js-sfx">
+            <source class = "js-ogg" src ="Assets/CharacterSounds/Linus.ogg" type ="audio/ogg">
+            <source class = "js-mp3" src="Assets/CharacterSounds/Linus.mp3" type="audio/mpeg">
         </audio> 
-        
         
         <div class = "wrapper">
             <div class = "controls">
                 <!--I want this button to change its text when clicked-->
-                <button class = "music js-music-button">
-                    <img class="js-music-button-img" src="Assets/Images/Play.png" alt="Play/Pause Button">
-                </button>
+                <div class = "controls__left-buttons">
+                    <button class = "music js-music-button">
+                        <img class="js-music-button-img" src="Assets/Images/Play.png" alt="Play/Pause Button">
+                    </button>
+                    <button class = "easter-egg js-easter-egg">
+                        <img class="js-easter-egg-img" src="Assets/Images/Easter-Egg.png" alt="Easter Egg Button">
+                    </button>
+                </div>
+                
                 <button class = "help__open-button js-help-open-button">
                         <img class="js-help-button-img" src="Assets/Images/Help.png" alt="Help Button">
                 </button>
             </div>
-
+            <div class = "characters js-characters">
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Linus.png" alt = "Linus">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Wizard.png" alt = "Wizard">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Clint.png" alt = "Clint">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Kent.png" alt = "Kent">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Vincent.png" alt = "Vincent">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Emily.png" alt = "Emily">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Maru.png" alt = "Maru">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Sam.png" alt = "Sam">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Willy.png" alt = "Willy">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Penny.png" alt = "Penny">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Sandy.png" alt = "Sandy">
+                </class>
+                <class class = "characters__card">
+                    <img class = "characters__card__img js-character-card-img" src="Assets/Images/Robin.png" alt = "Robin">
+                </class>
+            </div>
             <!--This is the help button-->
             <div class = "help">
                 <!--This is the open button-->
@@ -71,7 +118,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
     <script src="main.js"></script>
 </body>

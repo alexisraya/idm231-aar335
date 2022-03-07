@@ -1,3 +1,5 @@
+// TODO: Add unique music for every cahracter
+// TODO: Have each zodiac symbol display at the same time and have clickable info
 
 /**
  * Initialize variables for the program
@@ -7,14 +9,18 @@
  * isHelping indicates whther the help block is showing
  */
 let character = "chicken";
+let hoveredChar = "chicken"
 let characterImg = "Assets/Images/Chicken.png";
 let bio = "";
+let sfxmp3 = "";
+let sfxogg = "";
 
 let month = "";
 let day = "";
 
 let isPlaying = false;
 let isHelping = false;
+let isEgging = false;
 
 /**
  * Function to retrieve the month and day that the user inputs
@@ -39,77 +45,101 @@ const getBday = () => {
  */
 const findBday = () =>{
     // if statement for Linus
-    if ((month == 1 && day <=19) || (month == 12 && day>21)){
+    if ((month == 1 && day <=19) || (month == 12 && day>21) || (hoveredChar == "Linus")){
         character = "Linus";
         characterImg = "Assets/Images/Linus.png";
         bio = "You feel like you're an outcast from other people around town and you're generally slow to trust people. You also like yams and coconuts!";
+        sfxmp3 = "Assets/CharacterSounds/Linus.mp3";
+        sfxogg = "Assets/CharacterSounds/Linus.ogg";
     }
     // if statement for Wizard
-    else if ((month == 1 && day >19) || (month == 2 && day<=18)){
+    else if ((month == 1 && day >19) || (month == 2 && day<=18) || (hoveredChar == "Wizard")){
         character = "Wizard";
         characterImg = "Assets/Images/Wizard.png";
         bio = "You are a very spiritual and whimsical person. You like mushrooms and cucumbers!";
+        sfxmp3 = "Assets/CharacterSounds/Wizard.mp3";
+        sfxogg = "Assets/CharacterSounds/Wizard.ogg";
     }
     // if statement for Clint
-    else if ((month == 2 && day >18) || (month == 3 && day<=20)){
+    else if ((month == 2 && day >18) || (month == 3 && day<=20) || (hoveredChar == "Clint")){
         character = "Clint";
         characterImg = "Assets/Images/Clint.png";
         bio = "You're a handy person and you really like rocks. You also like artichoke dip and risotto!";
+        sfxmp3 = "Assets/CharacterSounds/Clint.mp3";
+        sfxogg = "Assets/CharacterSounds/Clint.ogg";
     }
     // if statement for Kent
-    else if ((month == 3 && day >20) || (month == 4 && day<=19)){
+    else if ((month == 3 && day >20) || (month == 4 && day<=19) || (hoveredChar == "Kent")){
         character = "Kent";
         characterImg = "Assets/Images/Kent.png";
         bio = "You're a mysterious one. No one really knows your story. You like risotto and hazelnuts!";
+        sfxmp3 = "Assets/CharacterSounds/Kent.mp3";
+        sfxogg = "Assets/CharacterSounds/Kent.ogg";
     }
     // if statement for Vincent
-    else if ((month == 4 && day >20) || (month == 5 && day<=20)){
+    else if ((month == 4 && day >20) || (month == 5 && day<=20) || (hoveredChar == "Vincent")){
         character = "Vincent";
         characterImg = "Assets/Images/Vincent.png";
         bio = "You're energy and like to explore! You like grapes and ginger ale.";
+        sfxmp3 = "Assets/CharacterSounds/Vincent.mp3";
+        sfxogg = "Assets/CharacterSounds/Vincent.ogg";
     }
     // if statement for Emily
-    else if ((month == 5 && day >20) || (month == 6 && day<=21)){
+    else if ((month == 5 && day >20) || (month == 6 && day<=21) || (hoveredChar == "Emily")){
         character = "Emily";
         characterImg = "Assets/Images/Emily.png";
         bio = "You're crafty and a little shy. You like burgers and precious stones!";
+        sfxmp3 = "Assets/CharacterSounds/Emily.mp3";
+        sfxogg = "Assets/CharacterSounds/Emily.ogg";
     }
     // if statement for Maru
-    else if ((month == 6 && day >21) || (month == 7 && day<=22)){
+    else if ((month == 6 && day >21) || (month == 7 && day<=22) || (hoveredChar == "Maru")){
         character = "Maru";
         characterImg = "Assets/Images/Maru.png";
         bio = "You like to help others and you're into science. You also like strawberries cheese!";
+        sfxmp3 = "Assets/CharacterSounds/Maru.mp3";
+        sfxogg = "Assets/CharacterSounds/Maru.ogg";
     }
     // if statement for Sam
-    else if ((month == 7 && day >22) || (month == 8 && day<=22)){
+    else if ((month == 7 && day >22) || (month == 8 && day<=22) || (hoveredChar == "Sam")){
         character = "Sam";
         characterImg = "Assets/Images/Sam.png";
         bio = "You are a music junkie and homebody. You like pizza and maple bars";
+        sfxmp3 = "Assets/CharacterSounds/Sam.mp3";
+        sfxogg = "Assets/CharacterSounds/Sam.ogg";
 
     }
     // if statement for Willy
-    else if ((month == 8 && day >22) || (month == 9 && day<=22)){
+    else if ((month == 8 && day >22) || (month == 9 && day<=22) || (hoveredChar == "Willy")){
         character = "Willy";
         characterImg = "Assets/Images/Willy.png";
         bio = "The ocean is your home. You like the beach and sea creatures!";
+        sfxmp3 = "Assets/CharacterSounds/Willy.mp3";
+        sfxogg = "Assets/CharacterSounds/Willy.ogg";
     }
     // if statement for Penny
-    else if ((month == 9 && day >22) || (month == 10 && day<=23)){
+    else if ((month == 9 && day >22) || (month == 10 && day<=23) || (hoveredChar == "Penny")){
         character = "Penny";
         characterImg = "Assets/Images/Penny.png";
         bio = "You're someone that people look up to. You like melons and poppies!";
+        sfxmp3 = "Assets/CharacterSounds/Penny.mp3";
+        sfxogg = "Assets/CharacterSounds/Penny.ogg";
     }
     // if statement for Sandy
-    else if ((month == 10 && day >23) || (month == 11 && day<=21)){
+    else if ((month == 10 && day >23) || (month == 11 && day<=21) || (hoveredChar == "Sandy")){
         character = "Sandy";
         characterImg = "Assets/Images/Sandy.png";
         bio = "You like thrifting and the desert. You also like daffodils and mango sticky rice!";
+        sfxmp3 = "Assets/CharacterSounds/Sandy.mp3";
+        sfxogg = "Assets/CharacterSounds/Sandy.ogg";
     }
     // if statement for Robin
-    else if ((month == 11 && day >21) || (month == 12 && day<=21)){
+    else if ((month == 11 && day >21) || (month == 12 && day<=21) || (hoveredChar == "Robin")){
         character = "Robin";
         characterImg = "Assets/Images/Robin.png";
         bio = "You're very comforting and helpful. You like peaches and spaghetti!";
+        sfxmp3 = "Assets/CharacterSounds/Robin.mp3";
+        sfxogg = "Assets/CharacterSounds/Robin.ogg";
     }
     // move to the next step/function
     changeImg();
@@ -142,8 +172,20 @@ const changeImg = () =>{
     bioText.style.display = "block"
     // change the text of the button to 'Find Another Character'
     findButton.innerHTML = "Find Another Character!";
+
+    playSFX();
 };
 
+const playSFX = () =>{
+    const sfxAudio = document.querySelector('.js-sfx');
+    const sfxSource_ogg = document.querySelector('.js-ogg');
+    const sfxSource_mp3 = document.querySelector('.js-mp3');
+
+    sfxSource_ogg.src = sfxogg;
+    sfxSource_mp3.src = sfxmp3;
+    sfxAudio.load();
+    sfxAudio.play();
+};
 /**
  * Function to play/pause music
  * This will retrieve the music element and the music button's image
@@ -193,7 +235,7 @@ const showHelp = () =>{
 
     // next step, displaying the main box that contains the character and form
     displayMainBox(isHelping);
-}
+};
 
 /**
  * Function to show/hide the main box
@@ -211,6 +253,31 @@ function displayMainBox(isHiding){
         mainBox.style.display = "flex";
     }
 }
+
+/**
+ * Function to show/hide the main box
+ * This will retrieve the main box div element
+ * Then it will check if the main box is being displayed
+ * Depending on if it is displayed or not, it will then hide/show the box
+ * This function will only play if the user clicks on the help button
+ */
+ const showEgg = () =>{
+    // retrieve the character container element
+    const characterContainer = document.querySelector('.js-characters');
+    console.log(characterContainer);
+
+    // if the character container is showing, then hide the container
+    if (isEgging){
+        characterContainer.style.display = "none";
+        isEgging = false;
+    }
+    // if the character container isn't showing, then show the container
+    else{
+        characterContainer.style.display = "grid";
+        isEgging = true;
+    }
+
+};
 
 /**
  * Event Listeners
@@ -244,3 +311,16 @@ helpOpenButton.addEventListener('click', showHelp);
 // Retrieve element and add event for the close button that is displayed when the help box is visible
 const helpCloseButton = document.querySelector('.js-help-close-button');
 helpCloseButton.addEventListener('click', showHelp);
+
+// Retrieve element and add event for the easter egg button
+const easterEggButton = document.querySelector('.js-easter-egg');
+easterEggButton.addEventListener('click', showEgg);
+
+const easterEggImgs = document.querySelectorAll('.js-character-card-img');
+easterEggImgs.forEach((element) =>{
+    element.addEventListener('click', function(){
+        const altValue = element.getAttribute("alt");
+        hoveredChar = altValue;
+        findBday();
+    })
+});
