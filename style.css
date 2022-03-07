@@ -196,7 +196,7 @@ button{
     display: none;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(2,1fr);
-    min-height: 70px;;
+    min-height: 70px;
 }
 
 .characters__card{
@@ -206,10 +206,10 @@ button{
 }
 .characters__card__img{
     align-self: center;
-    max-width: 90%;
+    width: 100%;
 }
 .characters__card__img:hover{
-    max-width: 110%;
+    width: 110%;
 }
 @media (min-width: 600px){
     *{
