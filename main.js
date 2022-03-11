@@ -1,5 +1,4 @@
-// TODO: Add unique music for every cahracter
-// TODO: Have each zodiac symbol display at the same time and have clickable info
+// TODO: clean up
 
 /**
  * Initialize variables for the program
@@ -45,64 +44,160 @@ const getBday = () => {
  */
 const findBday = () =>{
     // if statement for Linus
-    if ((month == 1 && day <=19) || (month == 12 && day>21) || (hoveredChar == "Linus")){
+    if ((month == 1 && day <=19) || (month == 12 && day>21)){
         character = "Linus";
+    }
+    // if statement for Wizard
+    else if ((month == 1 && day >19) || (month == 2 && day<=18)){
+        character = "Wizard";
+    }
+    // if statement for Clint
+    else if ((month == 2 && day >18) || (month == 3 && day<=20)){
+        character = "Clint";
+    }
+    // if statement for Kent
+    else if ((month == 3 && day >20) || (month == 4 && day<=19)){
+        character = "Kent";
+    }
+    // if statement for Vincent
+    else if ((month == 4 && day >20) || (month == 5 && day<=20)){
+        character = "Vincent";
+    }
+    // if statement for Emily
+    else if ((month == 5 && day >20) || (month == 6 && day<=21)){
+        character = "Emily";
+    }
+    // if statement for Maru
+    else if ((month == 6 && day >21) || (month == 7 && day<=22)){
+        character = "Maru";
+    }
+    // if statement for Sam
+    else if ((month == 7 && day >22) || (month == 8 && day<=22)){
+        character = "Sam";
+    }
+    // if statement for Willy
+    else if ((month == 8 && day >22) || (month == 9 && day<=22)){
+        character = "Willy";
+    }
+    // if statement for Penny
+    else if ((month == 9 && day >22) || (month == 10 && day<=23)){
+        character = "Penny";
+    }
+    // if statement for Sandy
+    else if ((month == 10 && day >23) || (month == 11 && day<=21)){
+        character = "Sandy";
+    }
+    // if statement for Robin
+    else if ((month == 11 && day >21) || (month == 12 && day<=21)){
+        character = "Robin";
+    }
+    // move to the next step/function
+    setBdayInfo();
+};
+
+const findClickedChar = () =>{
+    if (hoveredChar == "Linus"){
+        character = "Linus";
+    }
+    // if statement for Wizard
+    else if (hoveredChar == "Wizard"){
+        character = "Wizard";
+    }
+    // if statement for Clint
+    else if (hoveredChar == "Clint"){
+        character = "Clint";
+    }
+    // if statement for Kent
+    else if (hoveredChar == "Kent"){
+        character = "Kent";
+    }
+    // if statement for Vincent
+    else if (hoveredChar == "Vincent"){
+        character = "Vincent";
+    }
+    // if statement for Emily
+    else if (hoveredChar == "Emily"){
+        character = "Emily";
+    }
+    // if statement for Maru
+    else if (hoveredChar == "Maru"){
+        character = "Maru";
+    }
+    // if statement for Sam
+    else if (hoveredChar == "Sam"){
+        character = "Sam";
+    }
+    // if statement for Willy
+    else if (hoveredChar == "Willy"){
+        character = "Willy";
+    }
+    // if statement for Penny
+    else if (hoveredChar == "Penny"){
+        character = "Penny";
+    }
+    // if statement for Sandy
+    else if (hoveredChar == "Sandy"){
+        character = "Sandy";
+    }
+    // if statement for Robin
+    else if (hoveredChar == "Robin"){
+        character = "Robin";
+    }
+    setBdayInfo();
+};
+
+const setBdayInfo = () =>{
+    // if statement for Linus
+    if (character == "Linus"){
         characterImg = "Assets/Images/Linus.png";
         bio = "You feel like you're an outcast from other people around town and you're generally slow to trust people. You also like yams and coconuts!";
         sfxmp3 = "Assets/CharacterSounds/Linus.mp3";
         sfxogg = "Assets/CharacterSounds/Linus.ogg";
     }
     // if statement for Wizard
-    else if ((month == 1 && day >19) || (month == 2 && day<=18) || (hoveredChar == "Wizard")){
-        character = "Wizard";
+    else if (character == "Wizard"){
         characterImg = "Assets/Images/Wizard.png";
         bio = "You are a very spiritual and whimsical person. You like mushrooms and cucumbers!";
         sfxmp3 = "Assets/CharacterSounds/Wizard.mp3";
         sfxogg = "Assets/CharacterSounds/Wizard.ogg";
     }
     // if statement for Clint
-    else if ((month == 2 && day >18) || (month == 3 && day<=20) || (hoveredChar == "Clint")){
-        character = "Clint";
+    else if (character == "Clint"){
         characterImg = "Assets/Images/Clint.png";
         bio = "You're a handy person and you really like rocks. You also like artichoke dip and risotto!";
         sfxmp3 = "Assets/CharacterSounds/Clint.mp3";
         sfxogg = "Assets/CharacterSounds/Clint.ogg";
     }
     // if statement for Kent
-    else if ((month == 3 && day >20) || (month == 4 && day<=19) || (hoveredChar == "Kent")){
-        character = "Kent";
+    else if (character == "Kent"){
         characterImg = "Assets/Images/Kent.png";
         bio = "You're a mysterious one. No one really knows your story. You like risotto and hazelnuts!";
         sfxmp3 = "Assets/CharacterSounds/Kent.mp3";
         sfxogg = "Assets/CharacterSounds/Kent.ogg";
     }
     // if statement for Vincent
-    else if ((month == 4 && day >20) || (month == 5 && day<=20) || (hoveredChar == "Vincent")){
-        character = "Vincent";
+    else if (character == "Vincent"){
         characterImg = "Assets/Images/Vincent.png";
         bio = "You're energy and like to explore! You like grapes and ginger ale.";
         sfxmp3 = "Assets/CharacterSounds/Vincent.mp3";
         sfxogg = "Assets/CharacterSounds/Vincent.ogg";
     }
     // if statement for Emily
-    else if ((month == 5 && day >20) || (month == 6 && day<=21) || (hoveredChar == "Emily")){
-        character = "Emily";
+    else if (character == "Emily"){
         characterImg = "Assets/Images/Emily.png";
         bio = "You're crafty and a little shy. You like burgers and precious stones!";
         sfxmp3 = "Assets/CharacterSounds/Emily.mp3";
         sfxogg = "Assets/CharacterSounds/Emily.ogg";
     }
     // if statement for Maru
-    else if ((month == 6 && day >21) || (month == 7 && day<=22) || (hoveredChar == "Maru")){
-        character = "Maru";
+    else if (character == "Maru"){
         characterImg = "Assets/Images/Maru.png";
-        bio = "You like to help others and you're into science. You also like strawberries cheese!";
+        bio = "You like to help others and you're into science. You also like strawberries and cheese!";
         sfxmp3 = "Assets/CharacterSounds/Maru.mp3";
         sfxogg = "Assets/CharacterSounds/Maru.ogg";
     }
     // if statement for Sam
-    else if ((month == 7 && day >22) || (month == 8 && day<=22) || (hoveredChar == "Sam")){
-        character = "Sam";
+    else if (character == "Sam"){
         characterImg = "Assets/Images/Sam.png";
         bio = "You are a music junkie and homebody. You like pizza and maple bars";
         sfxmp3 = "Assets/CharacterSounds/Sam.mp3";
@@ -110,32 +205,28 @@ const findBday = () =>{
 
     }
     // if statement for Willy
-    else if ((month == 8 && day >22) || (month == 9 && day<=22) || (hoveredChar == "Willy")){
-        character = "Willy";
+    else if (character == "Willy"){
         characterImg = "Assets/Images/Willy.png";
         bio = "The ocean is your home. You like the beach and sea creatures!";
         sfxmp3 = "Assets/CharacterSounds/Willy.mp3";
         sfxogg = "Assets/CharacterSounds/Willy.ogg";
     }
     // if statement for Penny
-    else if ((month == 9 && day >22) || (month == 10 && day<=23) || (hoveredChar == "Penny")){
-        character = "Penny";
+    else if (character == "Penny"){
         characterImg = "Assets/Images/Penny.png";
         bio = "You're someone that people look up to. You like melons and poppies!";
         sfxmp3 = "Assets/CharacterSounds/Penny.mp3";
         sfxogg = "Assets/CharacterSounds/Penny.ogg";
     }
     // if statement for Sandy
-    else if ((month == 10 && day >23) || (month == 11 && day<=21) || (hoveredChar == "Sandy")){
-        character = "Sandy";
+    else if (character == "Sandy"){
         characterImg = "Assets/Images/Sandy.png";
         bio = "You like thrifting and the desert. You also like daffodils and mango sticky rice!";
         sfxmp3 = "Assets/CharacterSounds/Sandy.mp3";
         sfxogg = "Assets/CharacterSounds/Sandy.ogg";
     }
     // if statement for Robin
-    else if ((month == 11 && day >21) || (month == 12 && day<=21) || (hoveredChar == "Robin")){
-        character = "Robin";
+    else if (character == "Robin"){
         characterImg = "Assets/Images/Robin.png";
         bio = "You're very comforting and helpful. You like peaches and spaghetti!";
         sfxmp3 = "Assets/CharacterSounds/Robin.mp3";
@@ -144,7 +235,6 @@ const findBday = () =>{
     // move to the next step/function
     changeImg();
 };
-
 /**
  * Function to change image and update text elements
  * This will change the main image and reveal the name of the character that the user matches with and their bio
@@ -169,10 +259,9 @@ const changeImg = () =>{
 
     // change the display of the character's name element and bio element to block so that they are not hidden
     revealText.style.display = "block";
-    bioText.style.display = "block"
+    bioText.style.display = "block";
     // change the text of the button to 'Find Another Character'
     findButton.innerHTML = "Find Another Character!";
-
     playSFX();
 };
 
@@ -264,7 +353,6 @@ function displayMainBox(isHiding){
  const showEgg = () =>{
     // retrieve the character container element
     const characterContainer = document.querySelector('.js-characters');
-    console.log(characterContainer);
 
     // if the character container is showing, then hide the container
     if (isEgging){
@@ -289,7 +377,7 @@ function displayMainBox(isHiding){
 
 // Retrieve element and add event for the submit button
 const findButton = document.querySelector('.js-find-button');
-findButton.addEventListener('click', getBday);
+findButton.addEventListener('click',getBday);
 
 // Retrieve element and add event for the hidden submit button
 // This button is hidden bc it's for those who use screen readers since the other main button is not in the form
@@ -321,6 +409,6 @@ easterEggImgs.forEach((element) =>{
     element.addEventListener('click', function(){
         const altValue = element.getAttribute("alt");
         hoveredChar = altValue;
-        findBday();
+        findClickedChar();
     })
 });
