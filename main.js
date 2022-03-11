@@ -5,7 +5,8 @@
  * character, characterImg, bio represent assets/values associated w each character
  * month and day are for the month and day the user inputs
  * isPlaying indicates whether the music is playing
- * isHelping indicates whther the help block is showing
+ * isHelping indicates whether the help block is showing
+ * isEgging indicated whether the easter egg gallery is showing
  */
 let character = "chicken";
 let hoveredChar = "chicken"
@@ -95,6 +96,10 @@ const findBday = () =>{
     setBdayInfo();
 };
 
+/**
+ * Function to match the character the user clicked with and their unique attributes
+ * Each character has their own if statement with the proper date ranges
+ */
 const findClickedChar = () =>{
     if (hoveredChar == "Linus"){
         character = "Linus";
@@ -146,6 +151,11 @@ const findClickedChar = () =>{
     setBdayInfo();
 };
 
+/**
+ * Function to set the unique info for each character
+ * Each character has their own if statement with the proper date ranges
+ * The values of character, characterImg, and bio are then changed to the respective values that are associated w the character
+ */
 const setBdayInfo = () =>{
     // if statement for Linus
     if (character == "Linus"){
@@ -235,6 +245,7 @@ const setBdayInfo = () =>{
     // move to the next step/function
     changeImg();
 };
+
 /**
  * Function to change image and update text elements
  * This will change the main image and reveal the name of the character that the user matches with and their bio
@@ -265,13 +276,20 @@ const changeImg = () =>{
     playSFX();
 };
 
+/*
+    Function to play the character's unique sound effect
+*/
 const playSFX = () =>{
+    // get the audio element
     const sfxAudio = document.querySelector('.js-sfx');
+    // get each source element for the audio
     const sfxSource_ogg = document.querySelector('.js-ogg');
     const sfxSource_mp3 = document.querySelector('.js-mp3');
 
+    // change the sources to the new sound
     sfxSource_ogg.src = sfxogg;
     sfxSource_mp3.src = sfxmp3;
+    // load and play the sound
     sfxAudio.load();
     sfxAudio.play();
 };
@@ -404,6 +422,10 @@ helpCloseButton.addEventListener('click', showHelp);
 const easterEggButton = document.querySelector('.js-easter-egg');
 easterEggButton.addEventListener('click', showEgg);
 
+/**
+ * For every image in the easter egg gallery:
+ * Add an event listener that will trigger findClickedChar when clicked
+ */
 const easterEggImgs = document.querySelectorAll('.js-character-card-img');
 easterEggImgs.forEach((element) =>{
     element.addEventListener('click', function(){
