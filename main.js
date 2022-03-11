@@ -1,4 +1,3 @@
-// TODO: clean up
 
 /**
  * Initialize variables for the program
