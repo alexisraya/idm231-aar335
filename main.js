@@ -21,6 +21,8 @@ let isPlaying = false;
 let isHelping = false;
 let isEgging = false;
 
+const soundPath = "Assets/CharacterSounds/";
+
 /**
  * Function to retrieve the month and day that the user inputs
  * Both values are held into previously initiated variables
@@ -160,86 +162,86 @@ const setBdayInfo = () =>{
     if (character == "Linus"){
         characterImg = "Assets/Images/Linus.png";
         bio = "You feel like you're an outcast from other people around town and you're generally slow to trust people. You also like yams and coconuts!";
-        sfxmp3 = "Assets/CharacterSounds/Linus.mp3";
-        sfxogg = "Assets/CharacterSounds/Linus.ogg";
+        sfxmp3 = `${soundPath}/Linus.mp3`;
+        sfxogg = `${soundPath}/Linus.ogg`;
     }
     // if statement for Wizard
     else if (character == "Wizard"){
         characterImg = "Assets/Images/Wizard.png";
         bio = "You are a very spiritual and whimsical person. You like mushrooms and cucumbers!";
-        sfxmp3 = "Assets/CharacterSounds/Wizard.mp3";
-        sfxogg = "Assets/CharacterSounds/Wizard.ogg";
+        sfxmp3 = `${soundPath}/Wizard.mp3`;
+        sfxogg = `${soundPath}/Wizard.ogg`;
     }
     // if statement for Clint
     else if (character == "Clint"){
         characterImg = "Assets/Images/Clint.png";
         bio = "You're a handy person and you really like rocks. You also like artichoke dip and risotto!";
-        sfxmp3 = "Assets/CharacterSounds/Clint.mp3";
-        sfxogg = "Assets/CharacterSounds/Clint.ogg";
+        sfxmp3 = `${soundPath}/Clint.mp3`;
+        sfxogg = `${soundPath}/Clint.ogg`;
     }
     // if statement for Kent
     else if (character == "Kent"){
         characterImg = "Assets/Images/Kent.png";
         bio = "You're a mysterious one. No one really knows your story. You like risotto and hazelnuts!";
-        sfxmp3 = "Assets/CharacterSounds/Kent.mp3";
-        sfxogg = "Assets/CharacterSounds/Kent.ogg";
+        sfxmp3 = `${soundPath}/Kent.mp3`;
+        sfxogg = `${soundPath}/Kent.ogg`;
     }
     // if statement for Vincent
     else if (character == "Vincent"){
         characterImg = "Assets/Images/Vincent.png";
         bio = "You're energy and like to explore! You like grapes and ginger ale.";
-        sfxmp3 = "Assets/CharacterSounds/Vincent.mp3";
-        sfxogg = "Assets/CharacterSounds/Vincent.ogg";
+        sfxmp3 = `${soundPath}/Vincent.mp3`;
+        sfxogg = `${soundPath}/Vincent.ogg`;
     }
     // if statement for Emily
     else if (character == "Emily"){
         characterImg = "Assets/Images/Emily.png";
         bio = "You're crafty and a little shy. You like burgers and precious stones!";
-        sfxmp3 = "Assets/CharacterSounds/Emily.mp3";
-        sfxogg = "Assets/CharacterSounds/Emily.ogg";
+        sfxmp3 = `${soundPath}/Emily.mp3`;
+        sfxogg = `${soundPath}/Emily.ogg`;
     }
     // if statement for Maru
     else if (character == "Maru"){
         characterImg = "Assets/Images/Maru.png";
         bio = "You like to help others and you're into science. You also like strawberries and cheese!";
-        sfxmp3 = "Assets/CharacterSounds/Maru.mp3";
-        sfxogg = "Assets/CharacterSounds/Maru.ogg";
+        sfxmp3 = `${soundPath}/Maru.mp3`;
+        sfxogg = `${soundPath}/Maru.ogg`;
     }
     // if statement for Sam
     else if (character == "Sam"){
         characterImg = "Assets/Images/Sam.png";
         bio = "You are a music junkie and homebody. You like pizza and maple bars";
-        sfxmp3 = "Assets/CharacterSounds/Sam.mp3";
-        sfxogg = "Assets/CharacterSounds/Sam.ogg";
+        sfxmp3 = `${soundPath}/Sam.mp3`;
+        sfxogg = `${soundPath}/Sam.ogg`;
 
     }
     // if statement for Willy
     else if (character == "Willy"){
         characterImg = "Assets/Images/Willy.png";
         bio = "The ocean is your home. You like the beach and sea creatures!";
-        sfxmp3 = "Assets/CharacterSounds/Willy.mp3";
-        sfxogg = "Assets/CharacterSounds/Willy.ogg";
+        sfxmp3 = `${soundPath}/Willy.mp3`;
+        sfxogg = `${soundPath}/Willy.ogg`;
     }
     // if statement for Penny
     else if (character == "Penny"){
         characterImg = "Assets/Images/Penny.png";
         bio = "You're someone that people look up to. You like melons and poppies!";
-        sfxmp3 = "Assets/CharacterSounds/Penny.mp3";
-        sfxogg = "Assets/CharacterSounds/Penny.ogg";
+        sfxmp3 = `${soundPath}/Penny.mp3`;
+        sfxogg = `${soundPath}/Penny.ogg`;
     }
     // if statement for Sandy
     else if (character == "Sandy"){
         characterImg = "Assets/Images/Sandy.png";
         bio = "You like thrifting and the desert. You also like daffodils and mango sticky rice!";
-        sfxmp3 = "Assets/CharacterSounds/Sandy.mp3";
-        sfxogg = "Assets/CharacterSounds/Sandy.ogg";
+        sfxmp3 = `${soundPath}/Sandy.mp3`;
+        sfxogg = `${soundPath}/Sandy.ogg`;
     }
     // if statement for Robin
     else if (character == "Robin"){
         characterImg = "Assets/Images/Robin.png";
         bio = "You're very comforting and helpful. You like peaches and spaghetti!";
-        sfxmp3 = "Assets/CharacterSounds/Robin.mp3";
-        sfxogg = "Assets/CharacterSounds/Robin.ogg";
+        sfxmp3 = `${soundPath}/Robin.mp3`;
+        sfxogg = `${soundPath}/Robin.ogg`;
     }
     // move to the next step/function
     changeImg();
