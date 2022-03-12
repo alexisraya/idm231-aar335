@@ -1,7 +1,7 @@
 :root{
+    --bio-size:1.15rem;
     --h1-size: 1.5rem;
     --p-size:1.25rem;
-    --bio-size:1.15rem;
 }
 
 @font-face {
@@ -14,14 +14,14 @@
 }
 
 body{
-    font-family: 'Space Mono', monospace, sans-serif;
     background-image: url(Assets/Images/Background.jpeg);
+    font-family: 'Space Mono', monospace, sans-serif;
 }
 h1{
     font-size: var(--h1-size);
-    text-align:center;
     margin-top: 0rem;
     margin-bottom: 1rem;
+    text-align:center;
 }
 p{
     font-family: 'Space Mono', monospace, sans-serif;
@@ -32,19 +32,19 @@ li{
     font-size: var(--p-size);
 }
 input{
-    font-family: 'Space Mono', monospace, sans-serif;
-    font-size: var(--p-size);
-    text-align:center;
     background-color: #F9FEFF;
     border-color: transparent;
     border-radius: 10px;
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: var(--p-size);
+    text-align:center;
 }
 label{
-    font-size: var(--p-size);
-    display: block;
-    text-align: center;
-    margin: 1rem auto;
     border-color: transparent;
+    display: block;
+    font-size: var(--p-size);
+    margin: 1rem auto;
+    text-align: center;
 }
 /* button{
     font-family: 'Space Mono', monospace, sans-serif;
@@ -52,20 +52,20 @@ label{
 } */
 img{
     display: block;
+    height: 75%;
     margin-left: auto;
     margin-right: auto;
-    height: 75%;
 }
 
 button{
-    border-style: none;
     background-color: transparent;
     border-color: none;
+    border-style: none;
 }
 
 .controls{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     margin: 2rem 1rem 0rem 1rem;
 }
@@ -77,13 +77,13 @@ button{
 }
 
 .box{
-    display: flex;
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    padding: 2rem 1rem;
-    margin: 1.5rem 1rem;
+    display: flex;
     flex-direction: column;
     justify-items: center;
+    margin: 1.5rem 1rem;
+    padding: 2rem 1rem;
 }
 /* This is for the help box */
 .help__help-text{
@@ -100,19 +100,18 @@ button{
     margin-bottom: 1rem;
 }
 .help__help-text--par{
-    text-align: left;
     margin-bottom: .75rem;
     margin-top:.25rem;
+    text-align: left;
 }
 .help__help-text--list{
-    text-align: left;
-    margin-top:.75rem;
     margin-bottom: .75rem;
+    margin-top:.75rem;
+    text-align: left;
 }
 
 /*This is for the main box*/
 .main_box{
-    /* width: 90%; */
     height: auto;
 }
 
@@ -120,67 +119,67 @@ button{
     order: 0;
 }
 .main_box__direction{
+    margin-bottom: .5rem;
+    margin-top: .5rem;
     order: 1;
     text-align: center;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
 }
 .box__form{
-    margin-bottom: 1rem;
-    order: 2;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 1rem;
+    order: 2;
 }
 
 
 .box__img{
-    order: 3;
     margin-top: 1.5rem;
+    order: 3;
 }
 
 .slash{
+    border:0;
     margin:0;
     padding:0;
-    border:0;
 }
 
 .box__reveal{
     order: 9;
 }
 .box__name{
-    margin-bottom: .5rem;
-    display:hidden;
-    text-align: center;
     align-items: flex-end;
+    display:hidden;
+    margin-bottom: .5rem;
+    text-align: center;
 }
 
 .box__bio{
+    align-items: flex-end;
+    display:hidden;
     font-size: var(--bio-size);
     line-height: 1.75rem;
     margin-bottom: 1rem;
     margin-top: 0rem;
-    display:hidden;
     text-align: center;
-    align-items: flex-end;
 }
 
 .box__button{
+    align-items: flex-end;
+    color:#F9FEFF;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: #66bcc2;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: .5rem;
     padding: .75rem 3rem;
-    border-color: transparent;
-    background-color: #66bcc2;
-    color:#F9FEFF;
-    border-radius: 10px;
-    align-items: flex-end;
     order: 3;
 }
 
 .box__button:active{
-    color:black;
     background-color: #497c80;
+    color:black;
 }
 
 .hidden{
@@ -190,19 +189,19 @@ button{
 .characters{
     background-color: rgba(216, 227, 228, .8);
     border-radius: 20px;
-    padding: 2rem 1rem;
-    margin: 1.5rem 1rem 0rem 1rem;
-    justify-items: center;
     display: none;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    margin: 1.5rem 1rem 0rem 1rem;
     min-height: 70px;
+    padding: 2rem 1rem;
 }
 
 .characters__card{
-    max-width: 100px;
     align-self: center;
     margin: 0 .25rem;
+    max-width: 100px;
 }
 .characters__card__img{
     align-self: center;
@@ -213,9 +212,9 @@ button{
 }
 @media (min-width: 600px){
     *{
+        --bio-size:1.15rem;
         --h1-size: 1.5rem;
         --p-size:1.25rem;
-        --bio-size:1.15rem;
     }
     .characters{
         grid-template-columns: repeat(12,1fr);
@@ -225,8 +224,8 @@ button{
 
 @media (min-width: 1000px){
     *{
+        --bio-size: 1.35rem;
         --h1-size: 2rem;
         --p-size: 1.5rem;
-        --bio-size: 1.35rem;
     }
 }
